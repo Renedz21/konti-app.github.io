@@ -5,78 +5,87 @@
   <title>Eliminación de cuenta y datos – Konti</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      background: #f4f6fb;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #2d2d2d;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+    
+    body {
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: #1a1a1a;
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+      line-height: 1.7;
+    }
+    
     .container {
-      max-width: 540px;
-      margin: 4rem auto;
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-      padding: 2.5rem 2rem;
+      max-width: 680px;
+      margin: 0 auto;
     }
+    
     h1 {
-      color: #0b6fbc;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      text-align: center;
-    }
-    .subtitle {
-      font-size: 1.07rem;
-      color: #444;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    .section-title {
-      font-weight: bold;
-      margin-top: 2rem;
-      margin-bottom: 0.7rem;
-      color: #0b6fbc;
-      font-size: 1.1rem;
-    }
-    ul {
-      margin: 0 0 1.5rem 1.2rem;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 0.6rem;
-      line-height: 1.5;
-    }
-    .steps {
-      margin-top: 2rem;
-    }
-    .steps ol {
-      margin-left: 1.2rem;
+      color: #4f46e5;
+      font-size: 2.5rem;
+      font-weight: 600;
       margin-bottom: 1.5rem;
+      letter-spacing: -0.5px;
     }
-    .steps li {
-      margin-bottom: 0.8rem;
+    
+    .subtitle {
+      font-size: 1.1rem;
+      color: #4a4a4a;
+      margin-bottom: 3rem;
+      line-height: 1.8;
     }
+    
     .email {
-      background: #f0f5ff;
-      color: #0b6fbc;
-      padding: 0.2em 0.5em;
-      border-radius: 4px;
-      font-family: monospace;
-      font-size: 1em;
-      word-break: break-all;
+      color: #4f46e5;
+      font-weight: 600;
     }
+    
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .section-title {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    ul, ol {
+      margin-left: 1.5rem;
+      color: #4a4a4a;
+    }
+    
+    li {
+      margin-bottom: 0.75rem;
+      padding-left: 0.5rem;
+    }
+    
     .footer {
-      font-size: 0.95em;
-      color: #888;
-      margin-top: 2.5rem;
+      font-size: 0.95rem;
+      color: #9ca3af;
+      margin-top: 4rem;
+      padding-top: 2rem;
       text-align: center;
+      border-top: 1px solid #e5e7eb;
     }
+    
     @media (max-width: 600px) {
-      .container {
-        margin: 1.5rem;
-        padding: 1.2rem 0.6rem;
+      body {
+        padding: 2rem 1.25rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
       }
     }
   </style>
@@ -84,28 +93,35 @@
 <body>
   <div class="container">
     <h1>Eliminación de cuenta y datos – Konti</h1>
+    
     <div class="subtitle">
-      Si deseas eliminar tu cuenta y todos los datos asociados a Konti, puedes solicitarlo en cualquier momento enviando un correo a <span class="email">konti.app@gmail.com</span> <br>
-      con el asunto <strong>“Eliminar mi cuenta”</strong>.
+      Si deseas eliminar tu cuenta y todos los datos asociados a Konti, puedes solicitarlo en cualquier momento enviando un correo a <span class="email">konti.app@gmail.com</span> 
+      con el asunto <strong>"Eliminar mi cuenta"</strong>.
     </div>
 
-    <div class="section-title">Datos que se eliminarán:</div>
-    <ul>
-      <li>Tu cuenta y credenciales (nombre, correo y contraseña).</li>
-      <li>Todas las boletas electrónicas y archivos subidos.</li>
-      <li>Cualquier información almacenada en la base de datos o el almacenamiento en la nube (Supabase).</li>
-    </ul>
+    <div class="section">
+      <div class="section-title">Datos que se eliminarán:</div>
+      <ul>
+        <li>Tu cuenta y credenciales (nombre, correo y contraseña).</li>
+        <li>Todas las boletas electrónicas y archivos subidos.</li>
+        <li>Cualquier información almacenada en la base de datos o el almacenamiento en la nube (Supabase).</li>
+      </ul>
+    </div>
 
-    <div class="section-title">Datos que podrían conservarse temporalmente:</div>
-    <ul>
-      <li>Por motivos técnicos y de seguridad, los datos eliminados pueden mantenerse en copias de respaldo por un período máximo de 30 días antes de su eliminación completa.</li>
-    </ul>
+    <div class="section">
+      <div class="section-title">Datos que podrían conservarse temporalmente:</div>
+      <ul>
+        <li>Por motivos técnicos y de seguridad, los datos eliminados pueden mantenerse en copias de respaldo por un período máximo de 30 días antes de su eliminación completa.</li>
+      </ul>
+    </div>
 
-    <div class="section-title steps">Pasos:</div>
-    <ol>
-      <li>Envía un correo a <span class="email">konti.app@gmail.com</span> indicando la dirección de correo asociada a tu cuenta.</li>
-      <li>Recibirás confirmación de eliminación dentro de los 7 días hábiles siguientes.</li>
-    </ol>
+    <div class="section">
+      <div class="section-title">Pasos:</div>
+      <ol>
+        <li>Envía un correo a <span class="email">konti.app@gmail.com</span> indicando la dirección de correo asociada a tu cuenta.</li>
+        <li>Recibirás confirmación de eliminación dentro de los 7 días hábiles siguientes.</li>
+      </ol>
+    </div>
 
     <div class="footer">
       Konti App • Protección de datos y privacidad
